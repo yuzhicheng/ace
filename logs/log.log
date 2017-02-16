@@ -1,0 +1,1083 @@
+2017-02-16 10:22:46  140  [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:484  - FrameworkServlet 'dispatcher': initialization started
+2017-02-16 10:22:46  150  [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:510  - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Feb 16 10:22:46 CST 2017]; root of context hierarchy
+2017-02-16 10:22:46  193  [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:208  - Registering annotated classes: [class com.yzc.config.WebConfig,class com.yzc.config.JpaConfig,class com.yzc.config.RedisCacheConfig,class com.yzc.config.WebSocketStompConfig,class com.yzc.config.MailConfig,class com.yzc.config.AspectJConfig,class com.yzc.config.MongoConfig]
+2017-02-16 10:22:48  1931 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:337  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-02-16 10:22:48  2143 [localhost-startStop-1] INFO  org.hibernate.Version:54  - HHH000412: Hibernate Core {4.3.6.Final}
+2017-02-16 10:22:48  2146 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:224  - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.generate_statistics=true, hibernate.order_updates=true, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.bytecode.use_reflection_optimizer=false, hibernate.hbm2ddl.auto=update, hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy, hibernate.use_sql_comments=true}
+2017-02-16 10:22:48  2147 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:346  - HHH000021: Bytecode provider name : javassist
+2017-02-16 10:22:48  2427 [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:66  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-16 10:22:48  2738 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:145  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-02-16 10:22:49  3231 [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:47  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-16 10:22:49  3319 [localhost-startStop-1] INFO  org.hibernate.validator.internal.util.Version:30  - HV000001: Hibernate Validator 5.2.4.Final
+2017-02-16 10:22:49  3641 [localhost-startStop-1] WARN  org.hibernate.id.GUIDGenerator:49  - HHH000065: DEPRECATED : use [org.hibernate.id.UUIDGenerator] instead with custom [org.hibernate.id.UUIDGenerationStrategy] implementation
+2017-02-16 10:22:50  4434 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:182  - HHH000228: Running hbm2ddl schema update
+2017-02-16 10:22:50  4435 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:193  - HHH000102: Fetching database metadata
+2017-02-16 10:22:50  4438 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:205  - HHH000396: Updating schema
+2017-02-16 10:22:50  4458 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.ace_student
+2017-02-16 10:22:50  4458 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, classes, sex, description, title, student_name, password, school, grade, id, updatetime, status, username]
+2017-02-16 10:22:50  4459 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:50  4459 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:50  4467 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.ace_user
+2017-02-16 10:22:50  4467 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, sex, count, description, permission, title, card_id, password, name, tel, id, updatetime, status, username]
+2017-02-16 10:22:50  4467 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:50  4468 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:50  4474 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.author
+2017-02-16 10:22:50  4475 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [author_name, createtime, birthdate, nationality, genre, description, id, deathdate, title, updatetime, status]
+2017-02-16 10:22:50  4475 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:50  4476 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:50  4482 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.category_datas
+2017-02-16 10:22:50  4483 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [dimension_path, preview, parent, createtime, description, title, is_default, nd_code, gb_code, short_name, id, order_num, updatetime, category, status]
+2017-02-16 10:22:50  4483 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:50  4483 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:50  4490 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.categorys
+2017-02-16 10:22:50  4490 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, purpose, gb_code, description, short_name, id, source, title, updatetime, nd_code, status]
+2017-02-16 10:22:50  4491 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:50  4491 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:50  4497 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.log_info
+2017-02-16 10:22:50  4497 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [date, createtime, method, user_name, ip, description, title, uri, args, user_id, action, id, updatetime, status]
+2017-02-16 10:22:50  4498 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:50  4498 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:50  4504 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.paints
+2017-02-16 10:22:50  4504 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [write_date, copyright, description, medium, title, content, popular_culture, provider, skill, id, provider_source, current_location, height, createtime, creator, object_type, appreciation, tags, estatus, background, title_cn, width, updatetime, author_id, specific_source, status]
+2017-02-16 10:22:50  4505 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:50  4505 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:50  4511 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.res_categories
+2017-02-16 10:22:50  4511 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [taxoncodeid, createtime, category_name, taxonpath, category_code, resource, description, title, res_type, taxoncode, short_name, id, updatetime, taxonname, status]
+2017-02-16 10:22:50  4512 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:50  4512 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:50  4517 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.res_coverages
+2017-02-16 10:22:50  4518 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [res_type, createtime, resource, target_title, target_type, description, id, title, updatetime, strategy, status, target]
+2017-02-16 10:22:50  4518 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:50  4519 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:50  4524 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.tech_infos
+2017-02-16 10:22:50  4524 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, requirements, resource, format, description, title, printable, res_type, entry, size, secure_key, location, id, updatetime, status, md5]
+2017-02-16 10:22:50  4525 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:50  4525 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [idx_techinfo_printable, resource, primary]
+2017-02-16 10:22:50  4528 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:242  - HHH000232: Schema update complete
+2017-02-16 10:22:50  4727 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:337  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-02-16 10:22:51  4783 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:145  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-02-16 10:22:51  4984 [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:47  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-16 10:22:51  5479 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:182  - HHH000228: Running hbm2ddl schema update
+2017-02-16 10:22:51  5479 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:193  - HHH000102: Fetching database metadata
+2017-02-16 10:22:51  5479 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:205  - HHH000396: Updating schema
+2017-02-16 10:22:51  5489 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.ace_student
+2017-02-16 10:22:51  5489 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, classes, sex, description, title, student_name, password, school, grade, id, updatetime, status, username]
+2017-02-16 10:22:51  5489 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:51  5489 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:51  5495 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.ace_user
+2017-02-16 10:22:51  5495 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, sex, count, description, permission, title, card_id, password, name, tel, id, updatetime, status, username]
+2017-02-16 10:22:51  5495 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:51  5496 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:51  5501 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.author
+2017-02-16 10:22:51  5501 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [author_name, createtime, birthdate, nationality, genre, description, id, deathdate, title, updatetime, status]
+2017-02-16 10:22:51  5501 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:51  5502 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:51  5507 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.category_datas
+2017-02-16 10:22:51  5507 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [dimension_path, preview, parent, createtime, description, title, is_default, nd_code, gb_code, short_name, id, order_num, updatetime, category, status]
+2017-02-16 10:22:51  5507 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:51  5508 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:51  5513 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.categorys
+2017-02-16 10:22:51  5513 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, purpose, gb_code, description, short_name, id, source, title, updatetime, nd_code, status]
+2017-02-16 10:22:51  5513 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:51  5513 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:51  5519 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.log_info
+2017-02-16 10:22:51  5519 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [date, createtime, method, user_name, ip, description, title, uri, args, user_id, action, id, updatetime, status]
+2017-02-16 10:22:51  5520 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:51  5520 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:51  5525 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.paints
+2017-02-16 10:22:51  5526 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [write_date, copyright, description, medium, title, content, popular_culture, provider, skill, id, provider_source, current_location, height, createtime, creator, object_type, appreciation, tags, estatus, background, title_cn, width, updatetime, author_id, specific_source, status]
+2017-02-16 10:22:51  5526 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:51  5527 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:51  5532 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.res_categories
+2017-02-16 10:22:51  5532 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [taxoncodeid, createtime, category_name, taxonpath, category_code, resource, description, title, res_type, taxoncode, short_name, id, updatetime, taxonname, status]
+2017-02-16 10:22:51  5533 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:51  5533 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:51  5538 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.res_coverages
+2017-02-16 10:22:51  5538 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [res_type, createtime, resource, target_title, target_type, description, id, title, updatetime, strategy, status, target]
+2017-02-16 10:22:51  5539 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:51  5539 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:22:51  5545 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.tech_infos
+2017-02-16 10:22:51  5545 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, requirements, resource, format, description, title, printable, res_type, entry, size, secure_key, location, id, updatetime, status, md5]
+2017-02-16 10:22:51  5545 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:22:51  5546 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [idx_techinfo_printable, resource, primary]
+2017-02-16 10:22:51  5548 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:242  - HHH000232: Schema update complete
+2017-02-16 10:22:51  5598 [localhost-startStop-1] WARN  org.hibernate.jpa.internal.EntityManagerFactoryRegistry:80  - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2017-02-16 10:22:52  6000 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:52  6010 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:52  6108 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:52  6109 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:52  6203 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:52  6205 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:52  6334 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:165  - Initializing ExecutorService  'clientInboundChannelExecutor'
+2017-02-16 10:22:52  6357 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:165  - Initializing ExecutorService  'clientOutboundChannelExecutor'
+2017-02-16 10:22:52  6658 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:52  6661 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:52  6708 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:52  6710 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  6758 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  6759 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  6807 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  6809 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  6857 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  6859 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7035 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7037 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7052 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7088 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7114 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7126 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7129 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7140 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7145 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7149 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7572 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7573 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:22:53  7734 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:267  - Detected @ExceptionHandler methods in springExceptionHandler
+2017-02-16 10:22:54  7818 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/datas],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.CategoryDataViewModel com.yzc.controller.CategoryController.createCategoryData(com.yzc.vos.CategoryDataViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7819 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/datas/{did}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.CategoryDataViewModel com.yzc.controller.CategoryController.updateCategoryData(java.lang.String,com.yzc.vos.CategoryDataViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7820 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/datas/{did}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.CategoryController.deleteCategoryData(java.lang.String)
+2017-02-16 10:22:54  7820 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys || /category/categories],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.CategoryViewModel com.yzc.controller.CategoryController.createCategory(com.yzc.vos.CategoryViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7821 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/{cid} || /category/categories/{cid}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.CategoryViewModel com.yzc.controller.CategoryController.updateCategory(java.lang.String,com.yzc.vos.CategoryViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7821 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys || /category/categories],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.CategoryViewModel> com.yzc.controller.CategoryController.readCategory(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7822 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/{cid} || /category/categories/{cid}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.CategoryController.deleteCategory(java.lang.String)
+2017-02-16 10:22:54  7822 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/{nd_code}/datas],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.CategoryDataViewModel> com.yzc.controller.CategoryController.readCategoryData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2017-02-16 10:22:54  7824 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/excel/import/path],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.ExcelController.importExcelToPath(java.lang.String)
+2017-02-16 10:22:54  7824 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/excel/export/path],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.ExcelController.exportExcelToPath(java.lang.String,java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7825 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/excel/export/student],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.ExcelController.exportExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2017-02-16 10:22:54  7825 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/excel/import/student],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.ExcelController.importExcel(javax.servlet.http.HttpServletRequest)
+2017-02-16 10:22:54  7826 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/file/load],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.yzc.controller.FileController.load(java.lang.String)
+2017-02-16 10:22:54  7827 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/file/upload],methods=[POST],params=[],headers=[],consumes=[multipart/form-data],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile)
+2017-02-16 10:22:54  7827 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/file/yzc/upload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.FileController.clientUpload(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-02-16 10:22:54  7828 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/file/download],methods=[GET],params=[],headers=[],consumes=[],produces=[multipart/form-data],custom=[]}" onto public java.lang.String com.yzc.controller.FileController.download(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-16 10:22:54  7828 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/mail],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.GreetingController.send(java.lang.String)
+2017-02-16 10:22:54  7829 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/feed],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.yzc.controller.GreetingController.greet(java.lang.String)
+2017-02-16 10:22:54  7830 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/home/homepage],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.yzc.controller.HomeController.home()
+2017-02-16 10:22:54  7830 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/home/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public org.springframework.http.ResponseEntity<com.yzc.vos.student.StudentViewModel> com.yzc.controller.HomeController.createStudent(com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult,org.springframework.web.util.UriComponentsBuilder)
+2017-02-16 10:22:54  7831 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/home/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.HomeController.updateStudent(java.lang.String,com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7832 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/jdbcTemplate/student/list],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.student.StudentViewModel> com.yzc.controller.JdbcTemplateController.queryStudentList(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7832 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/jdbcTemplate/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.JdbcTemplateController.createStudent(com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7833 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/jdbcTemplate/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.JdbcTemplateController.updateStudent(java.lang.String,com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7834 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/jdbcTemplate/{content}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.JdbcTemplateController.getStudent(java.lang.String)
+2017-02-16 10:22:54  7834 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/jdbcTemplate/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.JdbcTemplateController.deleteStudent(java.lang.String)
+2017-02-16 10:22:54  7835 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.PaintViewModel com.yzc.controller.paints.PaintController.update(com.yzc.vos.paints.PaintViewModel,org.springframework.validation.BindingResult,java.lang.String)
+2017-02-16 10:22:54  7836 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.paints.PaintController.delete(java.lang.String)
+2017-02-16 10:22:54  7836 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.PaintViewModel com.yzc.controller.paints.PaintController.create(com.yzc.vos.paints.PaintViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7837 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author/actions/query],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.paints.AuthorViewModel> com.yzc.controller.paints.PaintController.queryAuthorListByName(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7837 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author/query],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.paints.AuthorViewModel> com.yzc.controller.paints.PaintController.queryAuthorByNameAndNationality(java.lang.String,java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7838 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.PaintViewModel com.yzc.controller.paints.PaintController.getDetail(java.lang.String)
+2017-02-16 10:22:54  7838 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/actions/query],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.paints.PaintViewModel> com.yzc.controller.paints.PaintController.queryListByCond(java.lang.String,java.util.List<java.lang.String>,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7839 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.AuthorViewModel com.yzc.controller.paints.PaintController.createAuthor(com.yzc.vos.paints.AuthorViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7840 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.AuthorViewModel com.yzc.controller.paints.PaintController.updateAuthor(com.yzc.vos.paints.AuthorViewModel,org.springframework.validation.BindingResult,java.lang.String)
+2017-02-16 10:22:54  7840 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.AuthorViewModel com.yzc.controller.paints.PaintController.getAuthorDetail(java.lang.String)
+2017-02-16 10:22:54  7840 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.paints.PaintController.deleteAuthor(java.lang.String)
+2017-02-16 10:22:54  7842 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/data/import/author],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.paints.PaintImportController.importPaintAuthor(javax.servlet.http.HttpServletRequest)
+2017-02-16 10:22:54  7842 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/data/import/paints],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.paints.PaintImportController.importPaints(javax.servlet.http.HttpServletRequest)
+2017-02-16 10:22:54  7843 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/data/client/file/upload],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.paints.PaintImportController.clientFileUpload() throws java.io.IOException
+2017-02-16 10:22:54  7843 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/redis/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.RedisTemplateOperation.createStudent(com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7844 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/student/location],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[],custom=[]}" onto public java.lang.String com.yzc.controller.RestClientController.addStudentForLocation(com.yzc.vos.student.StudentViewModel)
+2017-02-16 10:22:54  7845 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/delete/student/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.RestClientController.deleteStudent(java.lang.String)
+2017-02-16 10:22:54  7845 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/file/upload],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.RestClientController.clientFileUpload()
+2017-02-16 10:22:54  7846 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/profile/student/{content}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.RestClientController.StudentProfile(java.lang.String)
+2017-02-16 10:22:54  7846 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/list/student],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.student.StudentViewModel> com.yzc.controller.RestClientController.StudentList(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7847 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/paints/author],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.paints.AuthorViewModel> com.yzc.controller.RestClientController.AuthorList(java.lang.String,java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7847 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/detail/student/{content}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.RestClientController.StudentDetail(java.lang.String)
+2017-02-16 10:22:54  7848 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/create/student],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.RestClientController.addStudent(com.yzc.vos.student.StudentViewModel)
+2017-02-16 10:22:54  7848 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/update/student],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.RestClientController.modifyStudent(com.yzc.vos.student.StudentViewModel)
+2017-02-16 10:22:54  7849 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/batch/delete],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.StudentController.batchDeleteStudent(java.util.LinkedHashSet<java.lang.String>)
+2017-02-16 10:22:54  7849 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/list],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.batchGetDetailStudent(java.util.Set<java.lang.String>)
+2017-02-16 10:22:54  7850 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/username/list],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.batchGetDetailStudentByUsername(java.util.Set<java.lang.String>)
+2017-02-16 10:22:54  7850 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/condition],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.queryStudentList(java.lang.String,java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7850 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.getStudentList(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7851 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.StudentController.createStudent(com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7851 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.StudentController.updateStudent(java.lang.String,com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7851 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.StudentController.deleteStudent(java.lang.String)
+2017-02-16 10:22:54  7852 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/{id}],methods=[PATCH],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.StudentController.patchStudent(java.lang.String,com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7852 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/{content}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.StudentController.getDetailStudent(java.lang.String)
+2017-02-16 10:22:54  7852 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/usernames || /student/username],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.readStudentList(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7852 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/batch/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public java.util.List<com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.batchAddStudent(java.util.List<com.yzc.vos.student.StudentViewModel>,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7853 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.user.UserViewModel com.yzc.controller.UserController.createUser(com.yzc.vos.user.UserViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7854 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.UserController.deleteUser(java.lang.String)
+2017-02-16 10:22:54  7854 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/search || /user/student],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.user.UserViewModel> com.yzc.controller.UserController.requestQueryUser(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7854 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/fuzzy/words/list],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.user.UserViewModel> com.yzc.controller.UserController.fuzzyGetUserList(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7855 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.user.UserViewModel com.yzc.controller.UserController.updateUser(java.lang.String,com.yzc.vos.user.UserViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7855 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/words/list],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.user.UserViewModel> com.yzc.controller.UserController.getUserList(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7855 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.List<com.yzc.vos.user.UserViewModel> com.yzc.controller.UserController.QueryUser(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7856 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/all/user],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.List<com.yzc.entity.User> com.yzc.controller.UserController.getUserListPage(java.lang.String,java.lang.String)
+2017-02-16 10:22:54  7856 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/ || /index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.yzc.mongo.entity.Order com.yzc.mongo.controller.OrderController.index()
+2017-02-16 10:22:54  7856 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/list/order],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.List<com.yzc.mongo.entity.Order> com.yzc.mongo.controller.OrderController.getOrderListByCustomer(java.lang.String)
+2017-02-16 10:22:54  7857 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.mongo.entity.Order com.yzc.mongo.controller.OrderController.createOrder(com.yzc.mongo.entity.Order,org.springframework.validation.BindingResult)
+2017-02-16 10:22:54  7917 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:315  - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-16 10:22:54  7924 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:315  - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2017-02-16 10:22:54  7940 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Feb 16 10:22:46 CST 2017]; root of context hierarchy
+2017-02-16 10:22:54  8054 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler:165  - Initializing ExecutorService  'messageBrokerSockJsTaskScheduler'
+2017-02-16 10:22:54  8086 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:315  - Mapped URL path [/hello/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-02-16 10:22:54  8109 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:165  - Initializing ExecutorService  'brokerChannelExecutor'
+2017-02-16 10:22:54  8147 [localhost-startStop-1] INFO  org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler:301  - Mapped "{[/macro],messageType=[SUBSCRIBE]}" onto public com.yzc.models.Greeting com.yzc.controller.GreetingController.handleSubscription()
+2017-02-16 10:22:54  8147 [localhost-startStop-1] INFO  org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler:301  - Mapped "{[/hello],messageType=[MESSAGE]}" onto public com.yzc.models.Greeting com.yzc.controller.GreetingController.greeting(com.yzc.models.HelloMessage) throws java.lang.Exception
+2017-02-16 10:22:54  8180 [localhost-startStop-1] INFO  org.springframework.context.support.DefaultLifecycleProcessor:341  - Starting beans in phase 2147483647
+2017-02-16 10:22:54  8182 [localhost-startStop-1] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler:171  - Starting...
+2017-02-16 10:22:54  8182 [localhost-startStop-1] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler:264  - BrokerAvailabilityEvent[available=true, SimpleBroker[DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2017-02-16 10:22:54  8183 [localhost-startStop-1] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler:181  - Started.
+2017-02-16 10:22:54  8221 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:503  - FrameworkServlet 'dispatcher': initialization completed in 8080 ms
+2017-02-16 10:22:57  11469 [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:862  - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Feb 16 10:22:46 CST 2017]; root of context hierarchy
+2017-02-16 10:22:57  11472 [localhost-startStop-1] INFO  org.springframework.context.support.DefaultLifecycleProcessor:356  - Stopping beans in phase 2147483647
+2017-02-16 10:22:57  11481 [localhost-startStop-1] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler:193  - Stopping...
+2017-02-16 10:22:57  11482 [localhost-startStop-1] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler:274  - BrokerAvailabilityEvent[available=false, SimpleBroker[DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2017-02-16 10:22:57  11483 [localhost-startStop-1] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler:203  - Stopped.
+2017-02-16 10:22:57  11487 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:203  - Shutting down ExecutorService 'brokerChannelExecutor'
+2017-02-16 10:22:57  11488 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler:203  - Shutting down ExecutorService 'messageBrokerSockJsTaskScheduler'
+2017-02-16 10:22:57  11497 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:203  - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2017-02-16 10:22:57  11497 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:203  - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2017-02-16 10:22:57  11501 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:462  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-02-16 10:32:46  141  [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:484  - FrameworkServlet 'dispatcher': initialization started
+2017-02-16 10:32:46  148  [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:510  - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Feb 16 10:32:46 CST 2017]; root of context hierarchy
+2017-02-16 10:32:46  194  [localhost-startStop-1] INFO  org.springframework.web.context.support.AnnotationConfigWebApplicationContext:208  - Registering annotated classes: [class com.yzc.config.WebConfig,class com.yzc.config.JpaConfig,class com.yzc.config.RedisCacheConfig,class com.yzc.config.WebSocketStompConfig,class com.yzc.config.MailConfig,class com.yzc.config.AspectJConfig,class com.yzc.config.MongoConfig]
+2017-02-16 10:32:47  1822 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:337  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-02-16 10:32:47  1920 [localhost-startStop-1] INFO  org.hibernate.Version:54  - HHH000412: Hibernate Core {4.3.6.Final}
+2017-02-16 10:32:47  1923 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:224  - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.generate_statistics=true, hibernate.order_updates=true, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.bytecode.use_reflection_optimizer=false, hibernate.hbm2ddl.auto=update, hibernate.ejb.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy, hibernate.use_sql_comments=true}
+2017-02-16 10:32:47  1923 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment:346  - HHH000021: Bytecode provider name : javassist
+2017-02-16 10:32:48  2152 [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version:66  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-16 10:32:48  2417 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:145  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-02-16 10:32:48  2680 [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:47  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-16 10:32:48  2730 [localhost-startStop-1] INFO  org.hibernate.validator.internal.util.Version:30  - HV000001: Hibernate Validator 5.2.4.Final
+2017-02-16 10:32:48  2975 [localhost-startStop-1] WARN  org.hibernate.id.GUIDGenerator:49  - HHH000065: DEPRECATED : use [org.hibernate.id.UUIDGenerator] instead with custom [org.hibernate.id.UUIDGenerationStrategy] implementation
+2017-02-16 10:32:49  3450 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:182  - HHH000228: Running hbm2ddl schema update
+2017-02-16 10:32:49  3451 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:193  - HHH000102: Fetching database metadata
+2017-02-16 10:32:49  3454 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:205  - HHH000396: Updating schema
+2017-02-16 10:32:49  3474 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.ace_student
+2017-02-16 10:32:49  3475 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, classes, sex, description, title, student_name, password, school, grade, id, updatetime, status, username]
+2017-02-16 10:32:49  3475 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:49  3475 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:49  3481 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.ace_user
+2017-02-16 10:32:49  3481 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, sex, count, description, permission, title, card_id, password, name, tel, id, updatetime, status, username]
+2017-02-16 10:32:49  3481 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:49  3481 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:49  3486 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.author
+2017-02-16 10:32:49  3487 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [author_name, createtime, birthdate, nationality, genre, description, id, deathdate, title, updatetime, status]
+2017-02-16 10:32:49  3487 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:49  3487 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:49  3493 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.category_datas
+2017-02-16 10:32:49  3494 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [dimension_path, preview, parent, createtime, description, title, is_default, nd_code, gb_code, short_name, id, order_num, updatetime, category, status]
+2017-02-16 10:32:49  3494 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:49  3494 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:49  3500 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.categorys
+2017-02-16 10:32:49  3500 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, purpose, gb_code, description, short_name, id, source, title, updatetime, nd_code, status]
+2017-02-16 10:32:49  3500 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:49  3500 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:49  3505 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.log_info
+2017-02-16 10:32:49  3506 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [date, createtime, method, user_name, ip, description, title, uri, args, user_id, action, id, updatetime, status]
+2017-02-16 10:32:49  3506 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:49  3506 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:49  3513 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.paints
+2017-02-16 10:32:49  3513 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [write_date, copyright, description, medium, title, content, popular_culture, provider, skill, id, provider_source, current_location, height, createtime, creator, object_type, appreciation, tags, estatus, background, title_cn, width, updatetime, author_id, specific_source, status]
+2017-02-16 10:32:49  3513 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:49  3514 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:49  3519 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.res_categories
+2017-02-16 10:32:49  3520 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [taxoncodeid, createtime, category_name, taxonpath, category_code, resource, description, title, res_type, taxoncode, short_name, id, updatetime, taxonname, status]
+2017-02-16 10:32:49  3520 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:49  3520 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:49  3525 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.res_coverages
+2017-02-16 10:32:49  3526 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [res_type, createtime, resource, target_title, target_type, description, id, title, updatetime, strategy, status, target]
+2017-02-16 10:32:49  3526 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:49  3526 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:49  3531 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.tech_infos
+2017-02-16 10:32:49  3531 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, requirements, resource, format, description, title, printable, res_type, entry, size, secure_key, location, id, updatetime, status, md5]
+2017-02-16 10:32:49  3531 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:49  3531 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [idx_techinfo_printable, resource, primary]
+2017-02-16 10:32:49  3533 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:242  - HHH000232: Schema update complete
+2017-02-16 10:32:49  3714 [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:337  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-02-16 10:32:49  3748 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect:145  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-02-16 10:32:49  3860 [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory:47  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-16 10:32:50  4166 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:182  - HHH000228: Running hbm2ddl schema update
+2017-02-16 10:32:50  4166 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:193  - HHH000102: Fetching database metadata
+2017-02-16 10:32:50  4167 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:205  - HHH000396: Updating schema
+2017-02-16 10:32:50  4179 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.ace_student
+2017-02-16 10:32:50  4180 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, classes, sex, description, title, student_name, password, school, grade, id, updatetime, status, username]
+2017-02-16 10:32:50  4180 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:50  4180 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:50  4186 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.ace_user
+2017-02-16 10:32:50  4186 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, sex, count, description, permission, title, card_id, password, name, tel, id, updatetime, status, username]
+2017-02-16 10:32:50  4187 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:50  4187 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:50  4194 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.author
+2017-02-16 10:32:50  4194 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [author_name, createtime, birthdate, nationality, genre, description, id, deathdate, title, updatetime, status]
+2017-02-16 10:32:50  4194 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:50  4194 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:50  4201 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.category_datas
+2017-02-16 10:32:50  4201 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [dimension_path, preview, parent, createtime, description, title, is_default, nd_code, gb_code, short_name, id, order_num, updatetime, category, status]
+2017-02-16 10:32:50  4201 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:50  4201 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:50  4207 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.categorys
+2017-02-16 10:32:50  4208 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, purpose, gb_code, description, short_name, id, source, title, updatetime, nd_code, status]
+2017-02-16 10:32:50  4208 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:50  4208 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:50  4214 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.log_info
+2017-02-16 10:32:50  4214 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [date, createtime, method, user_name, ip, description, title, uri, args, user_id, action, id, updatetime, status]
+2017-02-16 10:32:50  4214 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:50  4214 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:50  4220 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.paints
+2017-02-16 10:32:50  4220 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [write_date, copyright, description, medium, title, content, popular_culture, provider, skill, id, provider_source, current_location, height, createtime, creator, object_type, appreciation, tags, estatus, background, title_cn, width, updatetime, author_id, specific_source, status]
+2017-02-16 10:32:50  4220 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:50  4220 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:50  4227 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.res_categories
+2017-02-16 10:32:50  4227 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [taxoncodeid, createtime, category_name, taxonpath, category_code, resource, description, title, res_type, taxoncode, short_name, id, updatetime, taxonname, status]
+2017-02-16 10:32:50  4227 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:50  4227 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:50  4233 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.res_coverages
+2017-02-16 10:32:50  4234 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [res_type, createtime, resource, target_title, target_type, description, id, title, updatetime, strategy, status, target]
+2017-02-16 10:32:50  4234 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:50  4234 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [primary]
+2017-02-16 10:32:50  4240 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:66  - HHH000261: Table found: test.tech_infos
+2017-02-16 10:32:50  4240 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:67  - HHH000037: Columns: [createtime, requirements, resource, format, description, title, printable, res_type, entry, size, secure_key, location, id, updatetime, status, md5]
+2017-02-16 10:32:50  4240 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:69  - HHH000108: Foreign keys: []
+2017-02-16 10:32:50  4241 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.TableMetadata:70  - HHH000126: Indexes: [idx_techinfo_printable, resource, primary]
+2017-02-16 10:32:50  4242 [localhost-startStop-1] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate:242  - HHH000232: Schema update complete
+2017-02-16 10:32:50  4285 [localhost-startStop-1] WARN  org.hibernate.jpa.internal.EntityManagerFactoryRegistry:80  - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2017-02-16 10:32:50  4848 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:50  4859 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:50  4932 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:50  4933 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:50  5017 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:50  5017 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:50  5122 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:165  - Initializing ExecutorService  'clientInboundChannelExecutor'
+2017-02-16 10:32:51  5142 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:165  - Initializing ExecutorService  'clientOutboundChannelExecutor'
+2017-02-16 10:32:51  5454 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5455 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5519 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5520 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5559 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5559 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5600 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5601 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5643 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5645 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5760 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5761 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5776 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5808 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5836 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5844 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5846 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5858 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5864 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:51  5867 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:52  6304 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:52  6305 [localhost-startStop-1] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2017-02-16 10:32:52  6475 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:315  - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-16 10:32:52  6498 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/datas],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.CategoryDataViewModel com.yzc.controller.CategoryController.createCategoryData(com.yzc.vos.CategoryDataViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6498 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/datas/{did}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.CategoryDataViewModel com.yzc.controller.CategoryController.updateCategoryData(java.lang.String,com.yzc.vos.CategoryDataViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6499 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/datas/{did}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.CategoryController.deleteCategoryData(java.lang.String)
+2017-02-16 10:32:52  6499 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys || /category/categories],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.CategoryViewModel com.yzc.controller.CategoryController.createCategory(com.yzc.vos.CategoryViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6499 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/{cid} || /category/categories/{cid}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.CategoryViewModel com.yzc.controller.CategoryController.updateCategory(java.lang.String,com.yzc.vos.CategoryViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6499 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys || /category/categories],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.CategoryViewModel> com.yzc.controller.CategoryController.readCategory(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6499 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/{cid} || /category/categories/{cid}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.CategoryController.deleteCategory(java.lang.String)
+2017-02-16 10:32:52  6499 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/category/categorys/{nd_code}/datas],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.CategoryDataViewModel> com.yzc.controller.CategoryController.readCategoryData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2017-02-16 10:32:52  6500 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/excel/import/path],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.ExcelController.importExcelToPath(java.lang.String)
+2017-02-16 10:32:52  6500 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/excel/export/path],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.ExcelController.exportExcelToPath(java.lang.String,java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6500 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/excel/export/student],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.ExcelController.exportExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)
+2017-02-16 10:32:52  6500 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/excel/import/student],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.ExcelController.importExcel(javax.servlet.http.HttpServletRequest)
+2017-02-16 10:32:52  6501 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/file/load],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.yzc.controller.FileController.load(java.lang.String)
+2017-02-16 10:32:52  6502 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/file/upload],methods=[POST],params=[],headers=[],consumes=[multipart/form-data],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile)
+2017-02-16 10:32:52  6502 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/file/yzc/upload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.FileController.clientUpload(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2017-02-16 10:32:52  6502 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/file/download],methods=[GET],params=[],headers=[],consumes=[],produces=[multipart/form-data],custom=[]}" onto public java.lang.String com.yzc.controller.FileController.download(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-16 10:32:52  6502 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/mail],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.GreetingController.send(java.lang.String)
+2017-02-16 10:32:52  6503 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/feed],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.yzc.controller.GreetingController.greet(java.lang.String)
+2017-02-16 10:32:52  6503 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/home/homepage],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.yzc.controller.HomeController.home()
+2017-02-16 10:32:52  6503 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/home/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public org.springframework.http.ResponseEntity<com.yzc.vos.student.StudentViewModel> com.yzc.controller.HomeController.createStudent(com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult,org.springframework.web.util.UriComponentsBuilder)
+2017-02-16 10:32:52  6504 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/home/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.HomeController.updateStudent(java.lang.String,com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6505 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/jdbcTemplate/student/list],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.student.StudentViewModel> com.yzc.controller.JdbcTemplateController.queryStudentList(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6505 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/jdbcTemplate/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.JdbcTemplateController.createStudent(com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6505 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/jdbcTemplate/{content}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.JdbcTemplateController.getStudent(java.lang.String)
+2017-02-16 10:32:52  6505 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/jdbcTemplate/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.JdbcTemplateController.updateStudent(java.lang.String,com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6505 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/jdbcTemplate/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.JdbcTemplateController.deleteStudent(java.lang.String)
+2017-02-16 10:32:52  6507 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.PaintViewModel com.yzc.controller.paints.PaintController.update(com.yzc.vos.paints.PaintViewModel,org.springframework.validation.BindingResult,java.lang.String)
+2017-02-16 10:32:52  6507 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.paints.PaintController.delete(java.lang.String)
+2017-02-16 10:32:52  6507 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.PaintViewModel com.yzc.controller.paints.PaintController.create(com.yzc.vos.paints.PaintViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6508 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author/actions/query],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.paints.AuthorViewModel> com.yzc.controller.paints.PaintController.queryAuthorListByName(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6508 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author/query],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.paints.AuthorViewModel> com.yzc.controller.paints.PaintController.queryAuthorByNameAndNationality(java.lang.String,java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6508 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.PaintViewModel com.yzc.controller.paints.PaintController.getDetail(java.lang.String)
+2017-02-16 10:32:52  6508 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/actions/query],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.paints.PaintViewModel> com.yzc.controller.paints.PaintController.queryListByCond(java.lang.String,java.util.List<java.lang.String>,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6508 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.AuthorViewModel com.yzc.controller.paints.PaintController.createAuthor(com.yzc.vos.paints.AuthorViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6509 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.AuthorViewModel com.yzc.controller.paints.PaintController.updateAuthor(com.yzc.vos.paints.AuthorViewModel,org.springframework.validation.BindingResult,java.lang.String)
+2017-02-16 10:32:52  6509 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.paints.AuthorViewModel com.yzc.controller.paints.PaintController.getAuthorDetail(java.lang.String)
+2017-02-16 10:32:52  6509 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/author/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.paints.PaintController.deleteAuthor(java.lang.String)
+2017-02-16 10:32:52  6510 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/data/import/author],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.paints.PaintImportController.importPaintAuthor(javax.servlet.http.HttpServletRequest)
+2017-02-16 10:32:52  6510 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/data/import/paints],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.paints.PaintImportController.importPaints(javax.servlet.http.HttpServletRequest)
+2017-02-16 10:32:52  6510 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/paints/data/client/file/upload],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.paints.PaintImportController.clientFileUpload() throws java.io.IOException
+2017-02-16 10:32:52  6510 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/redis/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.RedisTemplateOperation.createStudent(com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6511 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/student/location],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[],custom=[]}" onto public java.lang.String com.yzc.controller.RestClientController.addStudentForLocation(com.yzc.vos.student.StudentViewModel)
+2017-02-16 10:32:52  6511 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/delete/student/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.RestClientController.deleteStudent(java.lang.String)
+2017-02-16 10:32:52  6511 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/file/upload],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.RestClientController.clientFileUpload()
+2017-02-16 10:32:52  6511 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/profile/student/{content}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.RestClientController.StudentProfile(java.lang.String)
+2017-02-16 10:32:52  6512 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/list/student],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.student.StudentViewModel> com.yzc.controller.RestClientController.StudentList(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6512 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/paints/author],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.paints.AuthorViewModel> com.yzc.controller.RestClientController.AuthorList(java.lang.String,java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6512 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/detail/student/{content}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.RestClientController.StudentDetail(java.lang.String)
+2017-02-16 10:32:52  6512 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/create/student],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.RestClientController.addStudent(com.yzc.vos.student.StudentViewModel)
+2017-02-16 10:32:52  6512 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/rest/client/update/student],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.RestClientController.modifyStudent(com.yzc.vos.student.StudentViewModel)
+2017-02-16 10:32:52  6513 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/batch/delete],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.StudentController.batchDeleteStudent(java.util.LinkedHashSet<java.lang.String>)
+2017-02-16 10:32:52  6513 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/list],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.batchGetDetailStudent(java.util.Set<java.lang.String>)
+2017-02-16 10:32:52  6513 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/username/list],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.batchGetDetailStudentByUsername(java.util.Set<java.lang.String>)
+2017-02-16 10:32:52  6514 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/condition],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.queryStudentList(java.lang.String,java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6514 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.getStudentList(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6514 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.StudentController.createStudent(com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6514 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.StudentController.updateStudent(java.lang.String,com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6514 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.StudentController.deleteStudent(java.lang.String)
+2017-02-16 10:32:52  6514 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/{id}],methods=[PATCH],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.StudentController.patchStudent(java.lang.String,com.yzc.vos.student.StudentViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6514 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/{content}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.student.StudentViewModel com.yzc.controller.StudentController.getDetailStudent(java.lang.String)
+2017-02-16 10:32:52  6514 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/usernames || /student/username],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.readStudentList(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6515 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/student/batch/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public java.util.List<com.yzc.vos.student.StudentViewModel> com.yzc.controller.StudentController.batchAddStudent(java.util.List<com.yzc.vos.student.StudentViewModel>,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6515 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.user.UserViewModel com.yzc.controller.UserController.createUser(com.yzc.vos.user.UserViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6516 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.String> com.yzc.controller.UserController.deleteUser(java.lang.String)
+2017-02-16 10:32:52  6516 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/search || /user/student],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.user.UserViewModel> com.yzc.controller.UserController.requestQueryUser(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6516 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/fuzzy/words/list],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.user.UserViewModel> com.yzc.controller.UserController.fuzzyGetUserList(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6516 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/{id}],methods=[PUT],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.vos.user.UserViewModel com.yzc.controller.UserController.updateUser(java.lang.String,com.yzc.vos.user.UserViewModel,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6517 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/words/list],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public com.yzc.vos.ListViewModel<com.yzc.vos.user.UserViewModel> com.yzc.controller.UserController.getUserList(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6517 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.List<com.yzc.vos.user.UserViewModel> com.yzc.controller.UserController.QueryUser(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6517 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/user/all/user],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.List<com.yzc.entity.User> com.yzc.controller.UserController.getUserListPage(java.lang.String,java.lang.String)
+2017-02-16 10:32:52  6518 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/ || /index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.yzc.mongo.entity.Order com.yzc.mongo.controller.OrderController.index()
+2017-02-16 10:32:52  6518 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/list/order],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.List<com.yzc.mongo.entity.Order> com.yzc.mongo.controller.OrderController.getOrderListByCustomer(java.lang.String)
+2017-02-16 10:32:52  6518 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:220  - Mapped "{[/create],methods=[POST],params=[],headers=[],consumes=[application/json],produces=[application/json],custom=[]}" onto public com.yzc.mongo.entity.Order com.yzc.mongo.controller.OrderController.createOrder(com.yzc.mongo.entity.Order,org.springframework.validation.BindingResult)
+2017-02-16 10:32:52  6531 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:315  - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2017-02-16 10:32:52  6659 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:523  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Feb 16 10:32:46 CST 2017]; root of context hierarchy
+2017-02-16 10:32:52  6728 [localhost-startStop-1] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:267  - Detected @ExceptionHandler methods in springExceptionHandler
+2017-02-16 10:32:52  6793 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler:165  - Initializing ExecutorService  'messageBrokerSockJsTaskScheduler'
+2017-02-16 10:32:52  6868 [localhost-startStop-1] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:315  - Mapped URL path [/hello/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2017-02-16 10:32:52  6908 [localhost-startStop-1] INFO  org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler:301  - Mapped "{[/macro],messageType=[SUBSCRIBE]}" onto public com.yzc.models.Greeting com.yzc.controller.GreetingController.handleSubscription()
+2017-02-16 10:32:52  6908 [localhost-startStop-1] INFO  org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler:301  - Mapped "{[/hello],messageType=[MESSAGE]}" onto public com.yzc.models.Greeting com.yzc.controller.GreetingController.greeting(com.yzc.models.HelloMessage) throws java.lang.Exception
+2017-02-16 10:32:52  6920 [localhost-startStop-1] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:165  - Initializing ExecutorService  'brokerChannelExecutor'
+2017-02-16 10:32:52  6955 [localhost-startStop-1] INFO  org.springframework.context.support.DefaultLifecycleProcessor:341  - Starting beans in phase 2147483647
+2017-02-16 10:32:52  6956 [localhost-startStop-1] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler:171  - Starting...
+2017-02-16 10:32:52  6956 [localhost-startStop-1] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler:264  - BrokerAvailabilityEvent[available=true, SimpleBroker[DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2017-02-16 10:32:52  6956 [localhost-startStop-1] INFO  org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler:181  - Started.
+2017-02-16 10:32:52  6989 [localhost-startStop-1] INFO  org.springframework.web.servlet.DispatcherServlet:503  - FrameworkServlet 'dispatcher': initialization completed in 6847 ms
+2017-02-16 10:33:04  18982 [http-apr-8080-exec-4] INFO  com.yzc.repository.Impl.BaseRepositoryImpl:325  - DOSQL2:propertyName is username  propertyValues [111111, 777777, 888888]
+2017-02-16 10:33:04  18996 [http-apr-8080-exec-4] INFO  com.yzc.repository.Impl.BaseRepositoryImpl:332  - where property name is username
+2017-02-16 10:33:04  18997 [http-apr-8080-exec-4] INFO  com.yzc.repository.Impl.BaseRepositoryImpl:345  - DOSQL: select a from com.yzc.entity.Student as a where username in (:values) order by  field(username, :values)
+2017-02-16 10:33:05  19177 [http-apr-8080-exec-4] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:275  - Session Metrics {
+    4673079 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    9376206 nanoseconds spent preparing 1 JDBC statements;
+    737032 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    15808488 nanoseconds spent executing 1 flushes (flushing a total of 3 entities and 0 collections);
+    32751 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
