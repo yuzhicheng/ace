@@ -1,0 +1,6 @@
+.idea/
+.gitignore.rej
+coverage-error.log
+ace.iml
+target/
+logs/
