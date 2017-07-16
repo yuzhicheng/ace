@@ -1,0 +1,81 @@
+{
+    "title": "Triptych with Scenes from Christ's Passion",
+    "description": "Leonardo Di Ser Piero Da Vinci",
+    "titleCn": "基督教激情场面的三联画",
+    "objectType": "Oil on wood panels",
+    "writeDate": "1500",
+    "medium": "Oil on panel",
+    "currentLocation": "Walker Art Gallery",
+    "content": "",
+    "background": "",
+    "authorId": "0ff878b2-bd39-11e6-a564-dc4a3e709f1e",
+    "authorName": "Leonardo",
+    "copyright": "",
+    "appreciation": "",
+    "skill": "",
+    "popularCulture": "",
+    "height": "54 cm(21.3 in)",
+    "width": "106.8 cm (42 in)",
+    "tags": [
+        "Triptych with Scenes from Christ's Passion",
+        "Aachen Altar (1485 - 1515)",
+        "Oil on wood panels",
+        "Oil on panel",
+        "Walker Art Gallery",
+        "Europe"
+    ],
+    "provider": "谷歌艺术计划网站",
+    "providerSource": "",
+    "specificSource": "",
+    "creator": "940605",
+    "estatus": "ONLINE",
+     "categories": {
+        "res_type": [
+            {
+                "taxoncode": "$RA0109"
+            }
+        ]
+    },
+    "coverages": [
+        {
+            "targetType": "Org",
+            "target": "nd",
+            "targetTitle": "nd公共库",
+            "strategy": "OWNER"
+        }
+    ],
+    "techInfo": {
+        "320": {
+            "location": "${ref-path}/dev_content_edu/esp/paints/4b2162ac-6ec9-4b59-8e7a-8fc32148154c/22690/320px-Black_Hours_-_Google_Art_Project.jpg",
+            "format": "image/jpg",
+            "size": 0,
+            "md5": "",
+            "entry": "",
+            "requirements": []
+        },
+        "800": {
+            "location": "${ref-path}/dev_content_edu/esp/paints/4b2162ac-6ec9-4b59-8e7a-8fc32148154c/22690/800px-Black_Hours_-_Google_Art_Project.jpg",
+            "format": "image/jpg",
+            "size": 0,
+            "md5": "",
+            "entry": "",
+            "requirements": []
+        },
+        "1280": {
+            "location": "${ref-path}/dev_content_edu/esp/paints/4b2162ac-6ec9-4b59-8e7a-8fc32148154c/22690/1280px-Black_Hours_-_Google_Art_Project.jpg",
+            "format": "image/jpg",
+            "size": 0,
+            "md5": "",
+            "entry": "",
+            "requirements": []
+        },
+        "source": {
+            "location": "${ref-path}/dev_content_edu/esp/paints/4b2162ac-6ec9-4b59-8e7a-8fc32148154c/22690/Black_Hours_-_Google_Art_Project.jpg",
+            "format": "image/jpg",
+            "size": 0,
+            "md5": "",
+            "entry": "",
+            "requirements": []
+        }
+    }
+}

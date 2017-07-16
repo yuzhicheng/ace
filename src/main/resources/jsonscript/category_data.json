@@ -1,0 +1,12 @@
+{
+    "title": "图片",
+    "shortName": "image",
+    "ndCode": "$RA0101",
+    "parent": "6bcb9fb0-f982-408d-90de-2222c4583124",
+    "description": "描述信息",
+    "orderNum": 1,
+    "gbCode": "zh-CN",
+    "category": "4b2162ac-6ec9-4b59-8e7a-8fc32148154c",
+    "dimensionPath": "",
+    "preview": null
+}

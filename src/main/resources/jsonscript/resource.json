@@ -1,0 +1,69 @@
+{
+    "title": "素材",
+    "globalTitle": {
+        "zh-CN": "素材"
+    },
+    "description": "素材资源",
+    "language": "zh-CN",
+    "keywords": [
+        "素材"
+    ],
+    "tags": [
+        "素材",
+        "图片"
+    ],
+    "preview": {},
+    "customProperties": {},
+    "lifeCycle": {
+        "version": "v0.1",
+        "status": "ONLINE",
+        "enable": "true",
+        "creator": "940605",
+        "publisher": "nd",
+        "provider": "nd",
+        "providerSource": "nd",
+        "providerMode": "nd"
+    },
+    "educationInfo": {
+        "interactivity": "2",
+        "interactivityLevel": "2",
+        "endUserType": "教师，管理者",
+        "semanticDensity": "1",
+        "context": "基础教育",
+        "ageRange": "7岁以上",
+        "difficulty": "easy",
+        "learningTime": "P0Y0M0DT3H0M",
+        "description": "教育资源描述",
+        "language": "zh-CN"
+    },
+    "copyright": {
+        "right": "ND",
+        "description": "版权描述",
+        "author": "johnny"
+    },
+    "techInfo": {
+        "href": {
+            "location": "${ref-path}/qa_content_edu_product/esp/behaviors/e2b6e9f9-cc75-4750-b225-c1601f8b3735.pkg/1004.json",
+            "format": "document/json",
+            "size": 2459,
+            "md5": "",
+            "entry": "",
+            "requirements": []
+        }
+    },
+    "coverages": [
+        {
+            "targetType": "Org",
+            "target": "nd",
+            "targetTitle": "tom.king",
+            "strategy": "OWNER"
+        }
+    ],
+    "categories": {
+        "res_type": [
+            {
+                "taxoncode": "$RA0101"
+            }
+        ]
+    }
+}

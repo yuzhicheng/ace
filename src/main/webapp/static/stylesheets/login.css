@@ -1,0 +1,74 @@
+/* css reset www.admin10000.com */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#555; text-decoration:none; }
+a:hover { text-decoration:underline; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+table { border-collapse:collapse; }
+html {overflow-y: scroll;}
+/* css common */
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+ .container {
+             background-color: #962e09;
+             height: 100%;
+             width:100%;
+         }
+        #main {
+            background-image: url(/FengShang/static/image/login/login.jpg);
+            position:relative;
+            width: 1024px;
+            height: 635px;
+            margin: 0 auto;
+        }
+        .form_frame{
+            width:300px;
+            position:relative;
+            left:384px;
+            top:252px;
+
+        }
+        .form_frame li{
+            margin:0 0 10px;
+            font-size:1.3em;
+            font-weight: bold;
+        }
+        .form_frame li span {
+            margin-left: 18px;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .input_area{
+            background-color: #FFF;
+            border:1px solid #CCC;
+            padding: 3px;
+            border-radius: 3px;
+        }
+        #sub{
+            margin-left: 32px;
+            padding-left:40px ;
+            margin-top: -4px;
+        }
+        .subbut {
+            margin-left: -15px;
+            margin-right:10px;
+            padding-top:7px;
+            width:70px;
+            background:transparent url("/FengShang/static/image/login/commit.png") no-repeat scroll center top;
+            border-radius: 4px;
+        }
+        .canbut{
+            margin-right:10px;
+            padding-top:7px;
+            width:70px;
+            background:transparent url("/FengShang/static/image/login/cancel.png") no-repeat scroll center top;
+            border-radius: 4px;
+        }

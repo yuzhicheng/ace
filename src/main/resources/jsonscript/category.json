@@ -1,0 +1,10 @@
+{
+  "title":"学科",
+  "shortName":"subject",
+  "ndCode":"$S",
+  "purpose":"根据国家学科分类标准，进行分类",
+  "description":"学科分类采用位字母用$代替，$S代表学科分类体系",
+  "source":"国家分类标准",
+  "gbCode":"zh-CN"
+
+}

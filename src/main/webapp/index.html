@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="img/favicon.html">
+<title>ace</title>
+<!-- Bootstrap core CSS -->
+</head>
+
+<body>
+	<section id="container" class="">
+		<!--sidebar end-->
+		<!--main content start-->
+		<section id="main-content">
+			<section class="wrapper">
+				<!--state overview start-->
+				<div class="row state-overview">
+					<div class="col-lg-12 col-sm-12">
+						<section class="panel">
+							<div class="row">
+								<div class="col-lg-6">
+									<table class="table table-bordered">
+										<tbody>
+											<tr>
+												<td>
+												 <img src="/ace/static/image/spritemap.png" />
+												 </td>											 
+											</tr>
+											<tr>
+												<td><img src="static/image/login/login.jpg" /></td>
+											</tr>
+											<tr>
+												<td><img src=""   id="my" height="400" width="870"/></td>
+											</tr>
+											<tr>
+												<td><img src="/ace/upload/image/1478072131439test.jpg"   height="400" width="870"/></td>
+											</tr>
+										</tbody>
+									</table>
+									<button type="button" class="btn btn-shadow btn-success btn-lg"
+										style="margin: 0 30px 20px;" id="add">添加</button>
+									<button type="reset" class="btn btn-shadow btn-default btn-lg"
+										style="margin: 0 30px 20px;">取消</button>
+									<!--custom chart end-->
+								</div>
+								<!-- <div class="col-lg-6" id="preview" height="530px" width="840px"></div> -->
+							</div>
+						</section>
+					</div>
+				</div>
+				<!--state overview end-->
+			</section>
+		</section>
+		<!--main content end-->
+	</section>
+	<!-- js placed at the end of the document so the pages load faster -->
+	<script src="./static/javascripts/jquery-2.1.4.min.js"></script>
+	<script src="static/javascripts/jquery.cookie.js"></script>
+	<script src="/ace/static/javascripts/bootstrap.min.js"></script>
+	<script>
+		$(function() {
+			$("#add").click(function() {
+				var logo = document.getElementById("logo").files[0];
+				var data = new FormData();
+				data.append("file", logo);
+				$.ajax({
+					url : '/ace/file/upload',
+					type : 'post',
+					processData : false,
+					contentType : false,
+					dataType : "json",
+					data : data,
+					success : function(data) {
+						console.log(data);
+					},
+					error : function(data, err) {
+						console.log(data);
+					}
+				});
+			});
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+
+			$.ajax({
+				url : '/ace/file/load?fileName=1478072131439test.jpg',
+				type : 'get',
+				success : function(data) {
+					console.log(data);
+					$("#my").attr("src", "data:image/jpg;base64," + data);
+				},
+				error : function(data, err) {
+					console.log("数据加载失败！");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
