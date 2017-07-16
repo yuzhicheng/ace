@@ -5,18 +5,18 @@ import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
-import com.yzc.mongo.entity.Order;
+import com.yzc.mongo.domain.OrderDomain;
 
-public interface OrderRepository extends MongoRepository<Order, String>{
+public interface OrderRepository extends MongoRepository<OrderDomain, String>{
              
-	List<Order> findByCustomer(String c);
+	List<OrderDomain> findByCustomer(String c);
 
-	List<Order> findByCustomerLike(String c);
+	List<OrderDomain> findByCustomerLike(String c);
 
-	List<Order> findByCustomerAndType(String c, String t);
+	List<OrderDomain> findByCustomerAndType(String c, String t);
 
-	List<Order> findByCustomerLikeAndType(String c, String t);
+	List<OrderDomain> findByCustomerLikeAndType(String c, String t);
 	
 	@Query("{'customer':'Chuck Wagon','type':?0}")
-	List<Order> findChucksOrders(String t);
+	List<OrderDomain> findChucksOrders(String t);
 }

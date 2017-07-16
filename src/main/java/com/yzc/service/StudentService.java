@@ -25,7 +25,7 @@ public interface StudentService {
 	 * 
 	 * @author yzc
 	 * @date 2016年9月1日
-	 * @param StudentModel
+	 * @param studentModel
 	 * @return StudentModel
 	 */
 	public StudentModel createStudent(StudentModel studentModel);
@@ -35,7 +35,7 @@ public interface StudentService {
 	 * 
 	 * @author yzc
 	 * @date 2016年9月1日
-	 * @param StudentModel
+	 * @param studentModel
 	 * @return StudentModel
 	 */
 	public StudentModel updateStudent(StudentModel studentModel);
@@ -60,8 +60,7 @@ public interface StudentService {
 	 * @param limit
 	 * @return ListViewModel<StudentModel>
 	 */
-	public ListViewModel<StudentModel> readStudentList(String words,
-			String limit);
+	public ListViewModel<StudentModel> readStudentList(String words, String limit);
 
 	/**
 	 * 查询学生: 根据words关键字精确查询，同时可以用可选参数username查询

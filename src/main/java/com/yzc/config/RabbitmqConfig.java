@@ -19,7 +19,7 @@ import com.rabbitmq.client.ConnectionFactory;
 public class RabbitmqConfig {
 	
 	private final static Logger LOG = LoggerFactory.getLogger(RabbitmqConfig.class);
-	
+
 	@Qualifier(value = "defaultQueueMessageListener")
 	@Autowired
 	private MessageListener messageListener;

@@ -1,12 +1,12 @@
 package com.yzc.config;
 
-import java.util.Properties;
-import java.util.concurrent.Executors;
-
+import com.yzc.support.CommonServiceHelper;
+import com.yzc.support.interceptors.AllInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
@@ -16,18 +16,13 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
-import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-import com.yzc.support.CommonServiceHelper;
-import com.yzc.support.interceptors.DemoInterceptor;
+import java.util.Properties;
+import java.util.concurrent.Executors;
 
 @Configuration
 @EnableWebMvc
@@ -35,7 +30,7 @@ import com.yzc.support.interceptors.DemoInterceptor;
 public class WebConfig extends WebMvcConfigurerAdapter implements SchedulingConfigurer{
 
 	@Autowired
-	private DemoInterceptor demoInterceptor;
+	private AllInterceptor allInterceptor;
 	
 	// 配置jsp视图解析器
 	@Bean
@@ -95,25 +90,33 @@ public class WebConfig extends WebMvcConfigurerAdapter implements SchedulingConf
 
 		return getLocalValidatorFactoryBean();
 	}
+
+	/**
+	 * 根据环境变理加载 properties
+	 *
+	 * @return
+	 */
+	@Bean
+	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+		return new PropertySourcesPlaceholderConfigurer();
+	}
 	
     /**
      * 加载CommonServiceHelper
      * 
-     * @return
+     * @return CommonServiceHelper
      * @since
      */
     @Bean
     public CommonServiceHelper getCommonServiceHelper() {
 
-        CommonServiceHelper commonServiceHelper = new CommonServiceHelper();
-
-        return commonServiceHelper;
+        return new CommonServiceHelper();
     }
      
     //拦截器配置
      @Override
     	public void addInterceptors(InterceptorRegistry registry) {
-    	 registry.addInterceptor(demoInterceptor);
+    	 registry.addInterceptor(allInterceptor);
     		super.addInterceptors(registry);
     	}
 

@@ -407,7 +407,7 @@ public class CategoryServiceImpl implements CategoryService {
 		// 处理返回数据
 		result.setTotal(0L);
 		if (response != null && response.getHits() != null) {
-			List<CategoryDataModel> items = new ArrayList<CategoryDataModel>();
+			List<CategoryDataModel> items = new ArrayList<>();
 			List<CategoryData> categoryDatas = response.getHits().getDocs();
 			if (categoryDatas != null) {
 				for (CategoryData categoryData : categoryDatas) {
@@ -510,7 +510,7 @@ public class CategoryServiceImpl implements CategoryService {
 	 * <br>
 	 * Created 2015年5月4日 上午11:39:06
 	 * 
-	 * @param did
+	 * @param id
 	 * @return
 	 * @author linsm
 	 */
@@ -610,7 +610,7 @@ public class CategoryServiceImpl implements CategoryService {
 	private boolean hasChildNode(String did) {
 		
 		QueryResponse<CategoryData> queryResponse = null;
-		AdaptQueryRequest<CategoryData> queryRequest = new AdaptQueryRequest<CategoryData>(new QueryRequest());
+		AdaptQueryRequest<CategoryData> queryRequest = new AdaptQueryRequest<>(new QueryRequest());
 		CategoryData bean = new CategoryData();
 		bean.setParent(did);
 		queryRequest.setParam(bean);

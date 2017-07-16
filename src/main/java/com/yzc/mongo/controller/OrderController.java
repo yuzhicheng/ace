@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yzc.mongo.entity.Item;
-import com.yzc.mongo.entity.Order;
+import com.yzc.mongo.domain.OrderDomain;
 import com.yzc.mongo.service.OrderService;
 import com.yzc.support.ValidResultHelper;
 
@@ -29,12 +29,12 @@ public class OrderController {
 	OrderService orderService;
 
 	@RequestMapping(value = { "/", "index" }, method = RequestMethod.GET)
-	public Order index() {
+	public OrderDomain index() {
 		
-		Order order = new Order();
+		OrderDomain order = new OrderDomain();
 		order.setCustomer("gg");
 		order.setType("2");
-		Collection<Item> itemList=new LinkedHashSet<Item>();
+		Collection<Item> itemList=new LinkedHashSet<>();
 		Item item=new Item();
 		item.setIdentifier(UUID.randomUUID().toString());
 		item.setPrice(12.5);
@@ -42,23 +42,23 @@ public class OrderController {
 		item.setQuantity(5);
 		itemList.add(item);
 		order.setItems(itemList);
-		Order o=orderService.save(order);
+		OrderDomain o=orderService.save(order);
 		return o;
 	}
-
+	
 	@RequestMapping(value = "/create", method = RequestMethod.POST, consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = { MediaType.APPLICATION_JSON_VALUE })
-	public Order createOrder(@Valid @RequestBody Order order,BindingResult validResult) {
+	public OrderDomain createOrder(@Valid @RequestBody OrderDomain order, BindingResult validResult) {
 
 		// 校验
 		ValidResultHelper.valid(validResult, "CREATE_ORDER_PARAM_VALID_FAIL","OrderController", "createOrder");
-		Order o = orderService.createOrder(order);
+		OrderDomain o = orderService.createOrder(order);
 		return o;
 	}
-
+	
 	@RequestMapping(value = "/list/order", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
-	public List<Order> getOrderListByCustomer(@RequestParam String customer) {
+	public List<OrderDomain> getOrderListByCustomer(@RequestParam String customer) {
 
-		List<Order> comList = orderService.getOrderList(customer);
+		List<OrderDomain> comList = orderService.getOrderList(customer);
 
 		return comList;
 	}

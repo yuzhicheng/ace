@@ -22,7 +22,7 @@ import redis.clients.jedis.JedisPoolConfig;
 @EnableCaching//启用注解驱动的缓存
 public class RedisCacheConfig extends CachingConfigurationSelector{
 
-	@Bean
+    @Bean
     public JedisConnectionFactory redisConnectionFactory() {
 
         JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
@@ -31,30 +31,30 @@ public class RedisCacheConfig extends CachingConfigurationSelector{
         jedisPoolConfig.setMaxWaitMillis(Long.valueOf(WebApplicationInitializer.redis_properties.getProperty("redis.pool.maxWait")));
         jedisPoolConfig.setTestOnBorrow(Boolean.valueOf(WebApplicationInitializer.redis_properties.getProperty("redis.pool.testOnBorrow")));
 
-        JedisConnectionFactory redisConnectionFactory = new JedisConnectionFactory();  
-        redisConnectionFactory.setHostName(WebApplicationInitializer.redis_properties.getProperty("redis.host"));  
+        JedisConnectionFactory redisConnectionFactory = new JedisConnectionFactory();
+        redisConnectionFactory.setHostName(WebApplicationInitializer.redis_properties.getProperty("redis.host"));
         redisConnectionFactory.setPort(Integer.valueOf(WebApplicationInitializer.redis_properties.getProperty("redis.port")));
         redisConnectionFactory.setDatabase(Integer.valueOf(WebApplicationInitializer.redis_properties.getProperty("redis.dbIndex")));
         redisConnectionFactory.setUsePool(true);
         redisConnectionFactory.setPoolConfig(jedisPoolConfig);
 
-        return redisConnectionFactory;  
-    }  
-  
-    @Bean
-    public StringRedisTemplate redisTemplate(RedisConnectionFactory cf) {  
-        RedisTemplate<String,Object> redisTemplate = new RedisTemplate<String,Object>();  
-        redisTemplate.setConnectionFactory(cf);  
-    	StringRedisTemplate srt = new StringRedisTemplate();
-    	srt.setConnectionFactory(cf);
-        redisTemplate.afterPropertiesSet();
-        return srt;
-    }   
+        return redisConnectionFactory;
+    }
 
     @Bean
-    public CacheManager cacheManager(StringRedisTemplate redisTemplate) {  
-        RedisCacheManager cacheManager = new RedisCacheManager(redisTemplate);  
+    public StringRedisTemplate redisTemplate(RedisConnectionFactory cf) {
+        RedisTemplate<String,Object> redisTemplate = new RedisTemplate<String,Object>();
+        redisTemplate.setConnectionFactory(cf);
+        StringRedisTemplate srt = new StringRedisTemplate();
+        srt.setConnectionFactory(cf);
+        redisTemplate.afterPropertiesSet();
+        return srt;
+    }
+
+    @Bean
+    public CacheManager cacheManager(StringRedisTemplate redisTemplate) {
+        RedisCacheManager cacheManager = new RedisCacheManager(redisTemplate);
         cacheManager.setDefaultExpiration(3600);
-	    return cacheManager;  
-	}  
+        return cacheManager;
+    }
 }

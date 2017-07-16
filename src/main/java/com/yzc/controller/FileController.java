@@ -32,10 +32,9 @@ public class FileController {
 	@Autowired
 	private FileService fileService;
 
-	public static final String FILE_PATH = "E:"+File.separator+ "jee-neon" + File.separator + "workspace"
-			+ File.separator + "acefile" + File.separator + "upload" + File.separator;
+	public static final String FILE_PATH = "F:\\workspace\\IdeaProjects\\acefile\\upload\\";
 	
-	public static final String IMAGE_PATH = "image/";
+	public static final String IMAGE_PATH = "image\\";
 
 	@RequestMapping(value = "/upload", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE }, method = RequestMethod.POST)
 	public Map<String, String> fileUpload(@RequestParam("file") MultipartFile file) {
