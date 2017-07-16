@@ -2,17 +2,25 @@ package com.yzc.mongo.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+import com.google.common.reflect.ClassPath;
+import com.yzc.core.exception.BizException;
 import com.yzc.mongo.service.DbNameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.IndexOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.index.Index;
+import org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexResolver;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.ServletContext;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -30,13 +38,15 @@ public class DbNameServiceImpl implements DbNameService {
     @Autowired
     private ServletContext servletContext;
 
+    @Autowired
+    MongoMappingContext mongoMappingContext;
 
     @Autowired
     private MongoTemplate mongoTemplate;
 
     @Override
     public List<String> cacheDbName() {
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         list.add(dbName);
 
         String jsonStr = JSON.toJSONString(list);
@@ -47,19 +57,17 @@ public class DbNameServiceImpl implements DbNameService {
 
     @Override
     public boolean validateDbName(String dbName) {
+
         String jsonStr = (String) servletContext.getAttribute(DBNAME_KEY);
 
-        List<String> list = JSON.parseObject(jsonStr, new TypeReference<List<String>>(){});
+        List<String> list = JSON.parseObject(jsonStr, new TypeReference<List<String>>() {
+        });
 
-        if(list == null || list.size() == 0){
+        if (list == null || list.size() == 0) {
             list = cacheDbName();
         }
 
-        if(list.contains(dbName) == true){
-            return true;
-        }else{
-            return false;
-        }
+        return list.contains(dbName);
     }
 
     @Override
@@ -67,9 +75,10 @@ public class DbNameServiceImpl implements DbNameService {
 
         String jsonStr = (String) servletContext.getAttribute(DBNAME_KEY);
 
-        List<String> list = JSON.parseObject(jsonStr, new TypeReference<List<String>>(){});
+        List<String> list = JSON.parseObject(jsonStr, new TypeReference<List<String>>() {
+        });
 
-        if(list == null || list.size() == 0){
+        if (list == null || list.size() == 0) {
             list = cacheDbName();
         }
 
@@ -80,10 +89,40 @@ public class DbNameServiceImpl implements DbNameService {
     @Override
     public void createIndexForTenantServiceOpen(String tenancy, boolean flag) {
 
-        createIndexForImage(tenancy, flag);
+        MongoPersistentEntityIndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+
+        try {
+            List<Class> classIndexs = new ArrayList<>();
+            Object[] classInfos = ClassPath.from(this.getClass().getClassLoader())
+                    .getTopLevelClasses("com.yzc.mongo.domain").toArray();
+
+            for(Object object:classInfos){
+                Class clazz = Class.forName(((ClassPath.ClassInfo) object).getName());
+                Document document = (Document) clazz.getAnnotation(Document.class);
+                if (document != null && document.collection().contains("tenantProvider.getTenant()")) {
+                    classIndexs.add(clazz);
+                }
+            }
+
+            Iterator<Class> classI$ = classIndexs.iterator();
+            while (classI$.hasNext()) {
+                Class toIndexClazz = classI$.next();
+                IndexOperations indexOperations = mongoTemplate.indexOps(toIndexClazz);
+                indexOperations.dropAllIndexes();
+                List<MongoPersistentEntityIndexResolver.IndexDefinitionHolder> indexDefinitionHolders = resolver.resolveIndexForEntity(mongoMappingContext.getPersistentEntity(toIndexClazz));
+
+                for (MongoPersistentEntityIndexResolver.IndexDefinitionHolder indexDefinitionHolder : indexDefinitionHolders) {
+                    indexOperations.ensureIndex(indexDefinitionHolder.getIndexDefinition());
+                }
+
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            throw new BizException("create.cache.error");
+        }
+
     }
 
-    private void createIndexForImage(String tenancy, boolean flag){
+    private void createIndexForImage(String tenancy, boolean flag) {
 
         String document = tenancy + "_image";
 

@@ -24,10 +24,11 @@ import javax.validation.Valid;
 import java.util.Date;
 
 /**
+ *
  * Created by yzc on 2017/7/15.
  */
 @RestController
-@RequestMapping({"/v0.1/app_routers", "/v0.1/{bizType}/app_routers"})
+@RequestMapping({"/v0.1/app_routers"})
 public class AppRouterController {
 
     @Autowired

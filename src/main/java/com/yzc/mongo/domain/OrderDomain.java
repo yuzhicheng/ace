@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document
+@Document(collection = "order")
 public class OrderDomain implements Serializable {
 	/**
 	 * 
@@ -19,7 +19,7 @@ public class OrderDomain implements Serializable {
 	@Field("client")
 	private String customer;
 	private String type;
-	 private Collection<Item> items=new LinkedHashSet<Item>();
+	 private Collection<Item> items=new LinkedHashSet<>();
 	public String getId() {
 		return id;
 	}
