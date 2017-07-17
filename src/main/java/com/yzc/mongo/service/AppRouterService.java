@@ -1,6 +1,9 @@
 package com.yzc.mongo.service;
 
 import com.yzc.mongo.domain.AppRouterDomain;
+import com.yzc.mongo.entity.Items;
+import com.yzc.mongo.search.Condition;
+import com.yzc.mongo.search.OffsetPage;
 
 
 /**
@@ -15,4 +18,10 @@ public interface AppRouterService {
     AppRouterDomain findAppRouter(String appId, String orgId, String bizType,Boolean isIncludeDeleted);
 
     AppRouterDomain save(AppRouterDomain appRouter);
+
+    AppRouterDomain findOne(String id);
+
+    Items<AppRouterDomain> getAppRouterList(Condition condition, OffsetPage offsetPage);
+
+    Items<AppRouterDomain> getAppRouterList(Condition condition, OffsetPage offsetPage, Boolean isCount);
 }

@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Random;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -616,5 +618,37 @@ public final class StringUtils {
     @SuppressWarnings("rawtypes")
 	public static String join(Collection collection, String separator) {
         return org.apache.commons.lang.StringUtils.join(collection, separator);
+    }
+
+    public static String AorB(String a,String b){
+        if (a == null) return b;
+        else return a;
+    }
+
+    public static int lastMatch(String regex, String s) {
+        Pattern pattern = Pattern.compile(regex);
+        int pos = -1;
+        Matcher matcher = pattern.matcher(s);
+        while (matcher.find()) {
+            pos = matcher.start();
+        }
+        return pos;
+    }
+
+    public static String underscore2Camel(String underscore) {
+        char[] underscoreChars = underscore.toCharArray();
+        StringBuilder camel = new StringBuilder();
+        int i = 0;
+        int length = underscoreChars.length;
+        while (i < length) {
+            if (underscoreChars[i] == '_') {
+                camel.append(Character.toUpperCase(underscoreChars[i + 1]));
+                i = i + 2;
+            } else {
+                camel.append(underscoreChars[i]);
+                i = i + 1;
+            }
+        }
+        return camel.toString();
     }
 }

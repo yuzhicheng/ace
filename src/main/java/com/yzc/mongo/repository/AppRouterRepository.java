@@ -11,4 +11,6 @@ public interface AppRouterRepository extends MongoRepository<AppRouterDomain, St
     AppRouterDomain findByAppIdAndOrgIdAndBizType(String appId, String orgId, String bizType);
 
     AppRouterDomain findByAppIdAndOrgIdAndBizTypeAndDeleted(String appId, String orgId, String bizType, boolean deleted);
+
+    AppRouterDomain findByIdAndDeletedIsFalse(String id);
 }

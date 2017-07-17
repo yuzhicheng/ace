@@ -41,6 +41,16 @@ public class TenantProvider {
         return "";
     }
 
+    public static String getTenantId() {
+
+        Tenant tenant = tenantHolder.get();
+        if(tenant == null) {
+            return "";
+        } else {
+            return tenant.getOrgId();
+        }
+    }
+
     public static void clear() {
         tenantHolder.remove();
     }
