@@ -42,7 +42,7 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public List<UserModel> queryUserById(String id, String include) {
-		final List<UserModel> result = new ArrayList<UserModel>();
+		final List<UserModel> result = new ArrayList<>();
 		String querySql = "SELECT u.identifier AS identifier,u.card_id AS username,u.password as password FROM ace_user u WHERE u.identifier=:identifier";
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("identifier", id);

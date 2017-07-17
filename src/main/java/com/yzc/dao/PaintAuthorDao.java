@@ -6,83 +6,78 @@ import com.yzc.entity.PaintAuthor;
 import com.yzc.vos.ListViewModel;
 
 public interface PaintAuthorDao {
-	/**
-	 * 创建名画作者
-	 * 
-	 * @param paintAuthor
-	 * @return
-	 */
-	public PaintAuthor savePaintAuthor(PaintAuthor paintAuthor);
+    /**
+     * 创建名画作者
+     *
+     * @param paintAuthor 名画作者数据
+     * @return 名画作者信息
+     */
+    PaintAuthor savePaintAuthor(PaintAuthor paintAuthor);
 
-	/**
-	 * 修改名画作者
-	 * 
-	 * @param paintAuthor
-	 * @return
-	 */
-	public PaintAuthor updatePaintAuthor(PaintAuthor paintAuthor);
+    /**
+     * 修改名画作者
+     *
+     * @param paintAuthor 名画作者数据
+     * @return 名画作者信息
+     */
+    PaintAuthor updatePaintAuthor(PaintAuthor paintAuthor);
 
-	/**
-	 * 删除名画作者
-	 * 
-	 * @param id
-	 * @return
-	 */
-	public void deletePaintAuthor(String id);
+    /**
+     * 删除名画作者
+     *
+     * @param id 名画作者id
+     */
+    void deletePaintAuthor(String id);
 
-	/**
-	 * 获取名画作者详情
-	 * 
-	 * @param id
-	 * @return
-	 */
-	public PaintAuthor getPaintAuthor(String id);
+    /**
+     * 获取名画作者详情
+     *
+     * @param id 名画作者id
+     * @return 名画作者信息
+     */
+    PaintAuthor getPaintAuthor(String id);
 
-	/**
-	 * 根据作者名查找名画作者列表
-	 * 
-	 * @param authorName
-	 * @param limit
-	 * @return
-	 */
-	public ListViewModel<PaintAuthor> queryPaintAuthorList(String authorName, String limit);
+    /**
+     * 根据作者名查找名画作者列表
+     *
+     * @param authorName 作者名称
+     * @param limit      分页参数
+     * @return 名画作者列表
+     */
+    ListViewModel<PaintAuthor> queryPaintAuthorList(String authorName, String limit);
 
-	/**
-	 * 批量获取作者信息
-	 * 
-	 * @param ids
-	 * @return
-	 */
-	public List<PaintAuthor> batchGetPaintAuthor(List<String> ids);
+    /**
+     * 批量获取作者信息
+     *
+     * @param ids 作者id列表
+     * @return 名画作者列表
+     */
+    List<PaintAuthor> batchGetPaintAuthor(List<String> ids);
 
-	/**
-	 * 根据authorName和nationality查询相关的authorId
-	 * 
-	 * @author yzc
-	 * @date 2016年11月7日
-	 * @param authorName
-	 * @param nationality
-	 * @return
-	 */
-	public List<String> getAuthorIdByNameAndNationality(String authorName, String nationality);
+    /**
+     * 根据authorName和nationality查询相关的authorId
+     *
+     * @param authorName  作者名称
+     * @param nationality 作者国籍
+     * @return 作者id列表
+     */
+    List<String> getAuthorIdByNameAndNationality(String authorName, String nationality);
 
-	/*
-     * 根据姓名和国籍查找作者列表
-	 * 
-	 * @param authorName
-	 * @nationality           
-	 * @param limit        
-	 * @return
-	 */
-	public List<PaintAuthor> queryAuthorByNameAndNationality(String authorName, String nationality, String limit);
+    /**
+     * @param authorName  作者名称
+     * @param nationality 作者国籍
+     * @param limit       分页参数
+     * @return 作者列表
+     */
+    List<PaintAuthor> queryAuthorByNameAndNationality(String authorName, String nationality, String limit);
 
-	/*
+    /**
      * 根据姓名和国籍查找作者数量
-	 * 
-	 * @param authorName
-	 * @nationality           
-	 * @param limit        
-	 * @return
-	 */
-	public Long queryCountByNameAndNationality(String authorName, String nationality, String limit);
+     *
+     * @param authorName  作者名称
+     * @param nationality 作者国籍
+     * @param limit       分页参数
+     * @return 作者数量
+     */
+    Long queryCountByNameAndNationality(String authorName, String nationality, String limit);
 }

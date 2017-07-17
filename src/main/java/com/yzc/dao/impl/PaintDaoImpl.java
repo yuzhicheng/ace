@@ -1,16 +1,5 @@
 package com.yzc.dao.impl;
 
-import java.math.BigInteger;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.persistence.Query;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Repository;
-
 import com.yzc.dao.PaintDao;
 import com.yzc.entity.Paint;
 import com.yzc.exception.repositoryException.EspStoreException;
@@ -19,6 +8,15 @@ import com.yzc.support.ErrorMessageMapper;
 import com.yzc.support.MessageException;
 import com.yzc.utils.CollectionUtils;
 import com.yzc.utils.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Repository;
+
+import javax.persistence.Query;
+import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Repository
 public class PaintDaoImpl implements PaintDao {
@@ -68,7 +66,7 @@ public class PaintDaoImpl implements PaintDao {
 
 	@Override
 	public long getCountByCond(String title, List<String> tags, String creator, List<String> authorIds) {
-		Map<String, Object> params = new HashMap<String, Object>();
+		Map<String, Object> params = new HashMap<>();
 		String sql = "select count(identifier) from paints where state = 1";
 
 		if (StringUtils.hasText(title)) {

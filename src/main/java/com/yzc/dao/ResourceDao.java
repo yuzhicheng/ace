@@ -10,73 +10,87 @@ public interface ResourceDao {
 
     /**
      * 查询总数
-     * 
-     * @param resType
-     * @param resCodes          支持多种资源查询,resType=eduresource时生效
-     * @param categories
-     * @param relations
-     * @param coverages
-     * @param propsMap
-     * @param words
-     * @param limit
-     * @param isNotManagement 判断是否需要对ND库下的资源只允许查出ONLINE的限制
-     * @param reverse 判断关系查询是否反转
-     * @return
+     *
+     * @param resType         资源类型
+     * @param resCodes        资源编码
+     * @param categories      资源分类维度
+     * @param categoryExclude 排除的分类维度
+     * @param relations       资源关系
+     * @param coverages       资源覆盖范围
+     * @param propsMap        属性值map
+     * @param words           关键字
+     * @param limit           分页参数
+     * @param reverse         关系是否反转
+     * @param useIn           否使用in查询
+     * @param tags            标签
+     * @return 资源数量
      */
-	public Long commomQueryCount(String resType, String resCodes, Set<String> categories, Set<String> categoryExclude,
-			List<Map<String, String>> relations, List<String> coverages, Map<String, Set<String>> propsMap,
-			String words, String limit, boolean reverse, boolean useIn, List<String> tags);
+    Long commomQueryCount(String resType, String resCodes, Set<String> categories, Set<String> categoryExclude,
+                          List<Map<String, String>> relations, List<String> coverages, Map<String, Set<String>> propsMap,
+                          String words, String limit, boolean reverse, boolean useIn, List<String> tags);
+
 
     /**
-     * 通用查询	
-     * 
-     * @param resType
-     * @param resCodes          支持多种资源查询,resType=eduresource时生效
-     * @param includes
-     * @param categories
-     * @param relations
-     * @param coverages
-     * @param propsMap
-     * @param words
-     * @param limit
-     * @param isNotManagement 判断是否需要对ND库下的资源只允许查出ONLINE的限制
-     * @param reverse 判断关系查询是否反转
-     * @return
+     * 通用查询
+     *
+     * @param resType         资源类型
+     * @param resCodes        资源编码
+     * @param includes        包括的属性信息
+     * @param categories      资源分类维度
+     * @param categoryExclude 排除的分类维度
+     * @param relations       资源关系
+     * @param coverages       资源覆盖范围
+     * @param propsMap        属性值map
+     * @param orderMap        排序map
+     * @param words           关键字
+     * @param limit           分页参数
+     * @param reverse         关系是否反转
+     * @param useIn           是否使用in查询
+     * @param tags            标签
+     * @return 资源列表
      */
-	List<ResourceModel> commomQueryByDB(String resType, String resCodes, List<String> includes, Set<String> categories,
-			Set<String> categoryExclude, List<Map<String, String>> relations, List<String> coverages,
-			Map<String, Set<String>> propsMap, Map<String, String> orderMap, String words, String limit,
-			boolean reverse, boolean useIn, List<String> tags);
+    List<ResourceModel> commomQueryByDB(String resType, String resCodes, List<String> includes, Set<String> categories,
+                                        Set<String> categoryExclude, List<Map<String, String>> relations, List<String> coverages,
+                                        Map<String, Set<String>> propsMap, Map<String, String> orderMap, String words, String limit,
+                                        boolean reverse, boolean useIn, List<String> tags);
+
 
     /**
-     * 判断使用IN 还是 EXISTS 
-     * TODO 该判断与业务关联比较大,存在不确定性
-     * <p>Create Time: 2015年12月2日   </p>
-     * <p>Create author: xiezy   </p>
-     * @param relations
-     * @param coverages
-     * @return  true == IN  false == EXISTS
+     * 判断使用IN 还是 EXISTS，与业务关联比较大,存在不确定性
+     *
+     * @param resType         资源类型
+     * @param resCodes        资源编码
+     * @param categories      资源分类维度
+     * @param categoryExclude 排除的分类维度
+     * @param relations       资源关系
+     * @param coverages       资源覆盖范围
+     * @param propsMap        属性值map
+     * @param words           关键字
+     * @param reverse         关系是否反转
+     * @param tags            标签
+     * @return boolean
      */
-	boolean judgeUseInOrExists(String resType, String resCodes, Set<String> categories, Set<String> categoryExclude,
-			List<Map<String, String>> relations, List<String> coverages, Map<String, Set<String>> propsMap,
-			String words, boolean reverse, List<String> tags);
+    boolean judgeUseInOrExists(String resType, String resCodes, Set<String> categories, Set<String> categoryExclude,
+                               List<Map<String, String>> relations, List<String> coverages, Map<String, Set<String>> propsMap,
+                               String words, boolean reverse, List<String> tags);
 
     /**
      * 根据资源类型与id查找数目
-     * (资源库中根据类型进行分区，加上类型查询速度更快)
-     * @param resType
-     * @param identifier
-     * @return
+     *
+     * @param resType    资源类型
+     * @param identifier 资源id
+     * @return 资源数量
      */
-	public int queryResCountByResId(String resourceType, String identifier);
+    int queryResCountByResId(String resType, String identifier);
 
     /**
      * 判断资源编码是否重复
-     * @param resType
-     * @param identifier
-     * @param code
-     * @return
+     *
+     * @param resType    资源类型
+     * @param identifier 资源id
+     * @param code       资源编码
+     * @return 资源编码数量
      */
-	public int queryCodeCountByResId(String resourceType, String identifier, String code);
+    int queryCodeCountByResId(String resType, String identifier, String code);
 
 }
