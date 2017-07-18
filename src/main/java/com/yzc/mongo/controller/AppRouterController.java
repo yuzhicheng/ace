@@ -31,7 +31,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by yzc on 2017/7/15.
+ * 应用路由控制器
+ *
+ * @author yzc
  */
 @RestController
 @RequestMapping({"/v0.1/app_routers"})
@@ -178,9 +180,9 @@ public class AppRouterController {
     /**
      * 2.1.8 获取应用列表 [GET] /app_routers
      *
-     * @param request  request
+     * @param request request
      * @return 应用路由列表
-     * @throws Exception
+     * @throws Exception BizException
      */
     @RequestMapping(method = RequestMethod.GET)
     public Items<AppRouterDomain> list(HttpServletRequest request) throws Exception {
@@ -199,7 +201,7 @@ public class AppRouterController {
 
         } catch (Exception e) {
             logger.error("查询应用路由列表失败", e);
-            throw new BizException(HttpStatus.BAD_REQUEST,"INVALID_QUERY_VALUE","invalid.query.value");
+            throw new BizException(HttpStatus.BAD_REQUEST, "INVALID_QUERY_VALUE", "invalid.query.value");
         }
     }
 
@@ -234,7 +236,7 @@ public class AppRouterController {
      */
     @RequestMapping(value = "/pause/{id}", method = RequestMethod.POST)
     public AppRouterDomain pause(@PathVariable String id,
-            @Valid @RequestBody TenantPause tenantPause) {
+                                 @Valid @RequestBody TenantPause tenantPause) {
 
         AppRouterDomain appRouter = appRouterService.findOne(id);
 

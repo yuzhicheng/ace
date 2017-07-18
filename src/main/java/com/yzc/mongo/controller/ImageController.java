@@ -1,4 +1,5 @@
 package com.yzc.mongo.controller;
+
 import com.yzc.mongo.domain.ImageDomain;
 import com.yzc.mongo.service.ImageService;
 import com.yzc.support.ValidResultHelper;
@@ -25,8 +26,8 @@ public class ImageController {
     /**
      * 创建图片记录
      *
-     * @param image
-     * @return
+     * @param image 图片记录
+     * @return 图片记录
      */
     @RequestMapping(method = RequestMethod.POST)
     public ImageDomain save(@Valid @RequestBody ImageDomain image, BindingResult validResult) {

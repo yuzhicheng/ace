@@ -6,8 +6,10 @@ import com.yzc.mongo.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 /**
- * Created by yzc on 2017/7/15.
+ * @author yzc
  */
 @Service
 public class ImageServiceImpl implements ImageService {
@@ -17,6 +19,7 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     public ImageDomain save(ImageDomain image) {
+        image.setCreateTime(new Date());
         return imageRespository.save(image);
     }
 }
