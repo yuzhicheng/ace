@@ -3,13 +3,17 @@ package com.yzc.mongo.entity;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 /**
- * Created by yzc on 2017/7/15.
+ * Created by yzc 2017年07月18日 下午 7:01
  */
 public class AppRouter {
 
+    /**
+     * 应用id
+     */
     @NotBlank(message = "app_id can't be blank")
     @Pattern(regexp = "^[a-zA-Z0-9-]{1,36}$", message = "app_id max length 36 and must be made up of [a-zA-Z0-9-]")
     private String appId;
@@ -42,6 +46,7 @@ public class AppRouter {
     /**
      * 开发者uid
      */
+    @NotNull(message = "developer_uid can't be null")
     private Long developerUid;
 
     /**
@@ -55,18 +60,19 @@ public class AppRouter {
     private String msg;
 
     /**
-     * 连接的数据库
+     * 应用使用哪个数据源进行存储
      */
     private String dbConn;
 
     /**
-     * 租户，用于数据库分表
+     * 应用在数据库中的表名索引，即索引至哪一套表
      */
     private String tenancy;
 
     /**
-     * 模板
+     * 模板id
      */
+    @Pattern(regexp = "^[a-zA-Z0-9-_]{0,36}$", message = "template_id max length 36 and must be made up of [a-zA-Z0-9-_]")
     private String templateId;
 
     public String getAppId() {

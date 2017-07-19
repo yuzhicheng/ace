@@ -60,10 +60,10 @@ public class IncludesConstant {
 	 */
 	public static List<String> getValidIncludes(String includes) {
 		if (StringUtils.isEmpty(includes)) {
-			return new ArrayList<String>();
+			return new ArrayList<>();
 		}
 
-		Set<String> set = new HashSet<String>(Arrays.asList(includes.split(",")));
+		Set<String> set = new HashSet<>(Arrays.asList(includes.split(",")));
 		List<String> includesList = getIncludesList();
 		for (String include : set) {
 			if (!includesList.contains(include.trim())) {
@@ -72,7 +72,7 @@ public class IncludesConstant {
 			}
 		}
 
-		return new ArrayList<String>(set);
+		return new ArrayList<>(set);
 	}
 
 }
