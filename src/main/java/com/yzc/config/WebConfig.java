@@ -94,7 +94,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements SchedulingConf
 	/**
 	 * 根据环境变理加载 properties
 	 *
-	 * @return
+	 * @return PropertySourcesPlaceholderConfigurer
 	 */
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {

@@ -1,13 +1,9 @@
 package com.yzc.controller;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Iterator;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.yzc.service.FileService;
+import com.yzc.support.ErrorMessageMapper;
+import com.yzc.support.MessageException;
+import com.yzc.utils.MessageConvertUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.yzc.service.FileService;
-import com.yzc.support.ErrorMessageMapper;
-import com.yzc.support.MessageException;
-import com.yzc.utils.MessageConvertUtil;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/file")
@@ -32,9 +29,9 @@ public class FileController {
 	@Autowired
 	private FileService fileService;
 
-	public static final String FILE_PATH = "F:\\workspace\\IdeaProjects\\acefile\\upload\\";
-	
-	public static final String IMAGE_PATH = "image\\";
+	private static final String FILE_PATH = "F:\\workspace\\IdeaProjects\\acefile\\upload\\";
+
+	private static final String IMAGE_PATH = "image\\";
 
 	@RequestMapping(value = "/upload", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE }, method = RequestMethod.POST)
 	public Map<String, String> fileUpload(@RequestParam("file") MultipartFile file) {
