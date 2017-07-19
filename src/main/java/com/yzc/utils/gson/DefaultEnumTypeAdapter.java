@@ -97,8 +97,8 @@ public class DefaultEnumTypeAdapter {
     private static final class EnumTypeAdapter<T extends Enum<T>> extends TypeAdapter<T> {
 
         // 枚举类型定义的枚举列表,getValue的返回值作为key
-        private final Map<String, T> valueToEnum = new HashMap<String, T>();
-        private final Map<T, Object> enumToValue = new HashMap<T, Object>();
+        private final Map<String, T> valueToEnum = new HashMap<>();
+        private final Map<T, Object> enumToValue = new HashMap<>();
 
         /**
          * 枚举适配器构造
