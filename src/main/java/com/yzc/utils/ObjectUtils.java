@@ -40,7 +40,7 @@ public final class ObjectUtils extends org.apache.commons.lang.ObjectUtils {
 	 */
 	private static Gson getGson() {
 		// 类处理器
-		Map<Type, Object> typeAdapters = new HashMap<Type, Object>();
+		Map<Type, Object> typeAdapters = new HashMap<>();
 		typeAdapters.put(Date.class, new DefaultDateTypeAdapter());
 		typeAdapters.put(java.sql.Date.class, new DefaultDateTypeAdapter(
 				"yyyy-MM-dd"));
@@ -48,7 +48,7 @@ public final class ObjectUtils extends org.apache.commons.lang.ObjectUtils {
 		typeAdapters.put(Timestamp.class, new DefaultDateTypeAdapter());
 
 		// 子类处理器
-		Map<Class<?>, Object> hierarchyTypeAdapters = new HashMap<Class<?>, Object>();
+		Map<Class<?>, Object> hierarchyTypeAdapters = new HashMap<>();
 		final GsonBuilder builder = new GsonBuilder().disableHtmlEscaping()
 				.serializeNulls();
 
@@ -78,14 +78,14 @@ public final class ObjectUtils extends org.apache.commons.lang.ObjectUtils {
 	 */
 	public static String toJson(Object obj) {
 		// 类处理器
-		Map<Type, Object> typeAdapters = new HashMap<Type, Object>();
+		Map<Type, Object> typeAdapters = new HashMap<>();
 		typeAdapters.put(Date.class, new DefaultDateTypeAdapter());
 		typeAdapters.put(java.sql.Date.class, new DefaultDateTypeAdapter(
 				"yyyy-MM-dd"));
 		typeAdapters.put(Time.class, new DefaultDateTypeAdapter("HH:mm:ss"));
 		typeAdapters.put(Timestamp.class, new DefaultDateTypeAdapter());
 		// 子类处理器
-		Map<Class<?>, Object> hierarchyTypeAdapters = new HashMap<Class<?>, Object>();
+		Map<Class<?>, Object> hierarchyTypeAdapters = new HashMap<>();
 		return toJson(obj, typeAdapters, hierarchyTypeAdapters);
 	}
 
@@ -144,14 +144,14 @@ public final class ObjectUtils extends org.apache.commons.lang.ObjectUtils {
 			str = processJson(str);
 		}
 		// 类处理器
-		Map<Type, Object> typeAdapters = new HashMap<Type, Object>();
+		Map<Type, Object> typeAdapters = new HashMap<>();
 		typeAdapters.put(Date.class, new DefaultDateTypeAdapter());
 		typeAdapters.put(java.sql.Date.class, new DefaultDateTypeAdapter(
 				"yyyy-MM-dd"));
 		typeAdapters.put(Time.class, new DefaultDateTypeAdapter("HH:mm:ss"));
 		typeAdapters.put(Timestamp.class, new DefaultDateTypeAdapter());
 		// 子类处理器
-		Map<Class<?>, Object> hierarchyTypeAdapters = new HashMap<Class<?>, Object>();
+		Map<Class<?>, Object> hierarchyTypeAdapters = new HashMap<>();
 		return fromJson(str, clazz, typeAdapters, hierarchyTypeAdapters);
 	}
 
