@@ -1,8 +1,10 @@
 package com.yzc.config;
 
 import java.io.IOException;
+import java.util.EnumSet;
 import java.util.Properties;
 
+import javax.servlet.DispatcherType;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration.Dynamic;
@@ -67,6 +69,13 @@ public class WebApplicationInitializer extends AbstractAnnotationConfigDispatche
 		LogMDCFilter logMDCFilter = new LogMDCFilter();
 		javax.servlet.FilterRegistration.Dynamic filterRegistration = servletContext.addFilter("logMDCFilter", logMDCFilter);
 		filterRegistration.setAsyncSupported(this.isAsyncSupported());
+		filterRegistration.addMappingForUrlPatterns(this.getDispatcherTypes(), false, new String[]{"/*"});
+	}
+
+	protected EnumSet<DispatcherType> getDispatcherTypes() {
+		return isAsyncSupported() ?
+				EnumSet.of(DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.INCLUDE, DispatcherType.ASYNC) :
+				EnumSet.of(DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.INCLUDE);
 	}
 
 }
