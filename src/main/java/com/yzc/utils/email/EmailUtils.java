@@ -38,7 +38,7 @@ public class EmailUtils {
 	// QQ邮箱的 SMTP 服务器地址为: smtp.qq.com
 	public static String EMAIL_SMTP_HOST = "smtp.qq.com";
 	// 发件人的邮箱和密码()
-	public static String EMAIL_ACCOUNT = "1799281706@qq.com";
+	public static String EMAIL_ACCOUNT = "xxxxx@qq.com";
 	public static String EMAIL_PASSWORD = "ljehpzswhjshehfh";
 
 	/**
